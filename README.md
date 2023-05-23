@@ -23,7 +23,7 @@ Descarga videos/reels de la plataforma YouTube rapido y facil desde termux con D
 
 ---
 
-![img](https://github.com/Ux4hack/DowTube/blob/main/images/DowTube.png)
+![img](https://github.com/Ux4hack/DowTube/blob/main/images/img.png)
 
 ---
 
