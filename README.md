@@ -1,4 +1,4 @@
-<a href="https://github.com/"><img alt="AwesomeWM Logo" height="180" align = "left" src="https://github.com/Ux4hack/DowTube/blob/main/images/logo.png"></a>
+<a href="https://github.com/"><img alt="AwesomeWM Logo" height="80" align = "left" src="https://github.com/Ux4hack/DowTube/blob/main/images/logo.png"></a>
 <b> © DOWNLOADER VIDEO YOUTUBE ©</b>
 [![Telegram Badge](https://img.shields.io/badge/-Ux4hack-32C803?style=for-the-badge&logo=telegram&logoColor=blue&link=https://t.me/Ux4hack)](https://t.me/Ux4hack)
   <p>&nbsp; </p>
