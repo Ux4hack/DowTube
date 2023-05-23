@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+G="\e[0;32m\033[1m"
+R="\e[1;31m"
+RED="\e[101m"
+Ween='\e[32m'
+W="\033[0m"
+#W='\033[90m'
+trap ctrl_c 2
+ctrl_c() {
+echo
+echo
+echo -e "  ${W}[${R}*${W}] ${R}DowTube Finalizado."
+echo -e "  ${W}[${R}*${W}] ${R}Desarrollador: ${W}Ux4hack"
+echo -e "  ${W}[${R}*${W}] ${R}Contáctame:${W} https://t.me/Ux4hack"
+echo -e "  ${W}[${R}*${W}] ${R}Github:${W} https://github.com/Ux4hack"
+echo
+exit
+}
+directorio="/storage/emulated/0/DowTube/"
+if [ ! -d "$directorio" ]; then
+          mkdir "$directorio"
+fi
+
+function banner() {
+clear;cat images/x
+echo -e '''\e[1;31m _____\033[0m                 \e[1;31m _______      \033[0m __'''
+echo -e '''\e[1;31m|  _  \ \033[0m .----..-.-.-. \e[1;31m|       |\033[0m.-.-.|  |--..----.'''
+echo -e '''\e[1;31m|. |   \ \033[0m| _  || | |  |\e[1;31m|.|   | |\033[0m| | ||  _  || -__|'''
+echo -e '''\e[1;31m|. |    |\033[0m|____||______|\e[1;31m`-|.  |-`\033[0m|___||_____||____|'''
+echo -e '''\e[1;31m|: 1    | \033[0m               \e[1;31m|:  |		  @Ux4hack'''
+echo -e '''\e[1;31m|:.. . / \033[0m                \e[1;31m|::.|'''
+echo -e '''\e[1;31m`-----` \033[0m                 \e[1;31m`---`'''
+}
+
+if ! command -v yt-dlp &> /dev/null; then
+	pip install --upgrade yt-dlp
+  exit 1
+fi
+
+
+	banner
+echo
+echo -ne " ${W}${RED} ::Link:: ${W}${R}${W} "
+	read -r link
+if [ -z "${link}" ]; then
+	banner;exit
+fi
+	clear
+	sleep 1
+	banner
+echo -e "	    ${R}${W}${RED} ::DESCARGANDO VIDEO:: ${W}${R}${W} "
+	yt-dlp -f best --no-mtime -o "%(autonumber)s-%(title)s.%(ext)s" --no-check-certificate --restrict-filenames ${link} > /dev/null 2>/dev/null
+	banner
+cp *.mp4 ${directorio}; rm -rf *.mp4 > /dev/null
+echo -e "           ${R}${W}${RED} ::VIDEO DESCARGANDO EN:: ${W}${R}${W} "
+echo
+echo -e "${R}[${W}>${R}]${W} /storage/emulated/0/DowTube${W}"
